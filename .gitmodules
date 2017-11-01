@@ -1,0 +1,3 @@
+[submodule "CognitiveGames"]
+	path = CognitiveGames
+	url = https://gitlab.autsoft.hu/cognitive/MobilApp.git
