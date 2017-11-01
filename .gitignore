@@ -1,3 +1,14 @@
+.idea
+AuthCommLib
+CognitiveGames
+CommonLib
+EmotivSDK
+Framework
+GameLib
+gradle
+RandomGame
+WordGame
+
 # Built application files
 *.apk
 *.ap_
