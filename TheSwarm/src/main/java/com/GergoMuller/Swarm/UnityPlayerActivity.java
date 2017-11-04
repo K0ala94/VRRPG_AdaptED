@@ -18,9 +18,11 @@ import javax.inject.Inject;
 import hu.bme.aut.adapted.authcommlib.annotation.RequireLogin;
 import hu.bme.aut.adapted.commonlib.util.Constants;
 import hu.bme.aut.adapted.commonlib.util.di.Mock;
+import hu.bme.aut.adapted.gamelib.annotation.HasDashboard;
 import hu.bme.aut.adapted.gamelib.ui.base.GameBase;
 import hu.bme.aut.adapted.gamelib.util.SensorListener;
 
+@HasDashboard
 @RequireLogin(securitylevel = RequireLogin.SecurityLevel.REQUIRED, role = RequireLogin.Role.USER)
 public class UnityPlayerActivity extends GameBase
 {
@@ -58,12 +60,12 @@ public class UnityPlayerActivity extends GameBase
         addSensorListener(new SensorListener() {
             @Override
             public void sensorStatusChanged(String name, Constants.Broadcast.Sensors.Status status) {
-                UnityPlayer.UnitySendMessage("GameManager", "reciveSensorStatusInfo", status.toString());
+                UnityPlayer.UnitySendMessage("GameManager", "recieveSensorStatusInfo", status.toString());
             }
 
             @Override
             public void attentionChanged(int value) {
-                UnityPlayer.UnitySendMessage("GameManager", "recievAttention", String.valueOf(value));
+                UnityPlayer.UnitySendMessage("GameManager", "recieveAttention", String.valueOf(value));
             }
 
             @Override
