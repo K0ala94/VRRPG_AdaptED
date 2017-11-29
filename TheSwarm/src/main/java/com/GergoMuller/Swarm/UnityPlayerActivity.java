@@ -65,7 +65,9 @@ public class UnityPlayerActivity extends GameBase
 
             @Override
             public void attentionChanged(int value) {
-                UnityPlayer.UnitySendMessage("GameManager", "recieveAttention", String.valueOf(value));
+                UnityPlayer.UnitySendMessage("GameManager",
+                                        "recieveAttention",
+                                        String.valueOf(value));
             }
 
             @Override
